@@ -110,7 +110,6 @@ class Twitter:
         for c in range(len(dm)):
             message = dm[c].message_create['message_data']['text']
         notiffail = self.api.send_direct_message(recipient_id=sender_id, text=message)
-        self.api.delete_direct_message(notiffail.id)
         self.api.delete_direct_message(notif2.id)
         print("Message deleted")
         time.sleep(10)
